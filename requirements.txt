@@ -1,0 +1,7 @@
+voila
+ipywidgets
+pandas
+numpy
+matplotlib
+tqdm
+gdown
