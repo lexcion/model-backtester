@@ -1,17 +1,11 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import ast
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from tqdm.notebook import tqdm
 import ipywidgets as widgets
 from IPython.display import display
+from tqdm.notebook import tqdm
 import os
-
 import gdown
-import pandas as pd
 
 # File ID from Google Drive
 file_id = '1eJfCer2tdxDrgINTxhtDk8i4mrJh3ZO7'  # Replace with your actual file ID
@@ -22,7 +16,6 @@ direct_link = f'https://drive.google.com/uc?id={file_id}&export=download'
 # Output filename
 filename = 'cleaned_all.csv'  # Name the file as you wish
 
-
 # Check if the file exists locally
 if not os.path.exists(filename):
     print(f"File '{filename}' not found locally. Downloading from Google Drive...")
@@ -30,16 +23,12 @@ if not os.path.exists(filename):
     # Download the file using gdown
     gdown.download(direct_link, filename, quiet=False)
 else:
-    
     print(f"File '{filename}' already exists locally.")
-    
+
 # Load the CSV into a DataFrame
 odds_df = pd.read_csv(filename)
 
-# Display the first few rows to verify
-#print(odds_df.head())
-
-# Define the betting simulator function
+# Betting simulation function
 def simulate_betting(
     df: pd.DataFrame,
     min_ev: float = 0.1,
@@ -83,7 +72,7 @@ def simulate_betting(
             continue
 
         if row['Type'] == "handicap_odds_q4" and q4:
-            score_diff = row['Q4 score difference']+row['H1 score difference']
+            score_diff = row['Q4 score difference'] + row['H1 score difference']
 
         elif row['Type'] == "handicap_odds_q2" and q2:
             score_diff = row['H1 score difference']
@@ -271,24 +260,13 @@ def simulate_betting(
     plt.grid(True)
     plt.show()
 
-    # Display the bets DataFrame
-    print("\nBets Details:")
-    print(bets_df.to_string(index=False))
-    
+    # Return the bets DataFrame
     return bets_df
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import ipywidgets as widgets
-from IPython.display import display
 
-# Load your data
-odds_df = pd.read_csv("cleaned_all.csv")
-
-# Create a layout for the sliders
+# Define widget layout
 slider_layout = widgets.Layout(width='500px', description_width='150px')
 
-# Create widgets for each parameter
+# Define interactive widgets
 min_ev_slider = widgets.FloatSlider(
     value=0,
     min=-1.0,
@@ -512,4 +490,3 @@ ui = widgets.VBox([
 
 # Display the widgets and output
 display(ui, out)
-
