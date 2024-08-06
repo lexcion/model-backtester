@@ -6,7 +6,7 @@ https://colab.research.google.com/github/lexcion/model-backtester/blob/main/mode
 
 # NBA Betting Simulator
 
-This is an interactive betting simulator for NBA 2023-2024 games, hosted on Binder using Voila.
+This is an interactive betting simulator for NBA 2023-2024 games. The odds are from bet365.
 
 ## How to Use
 
