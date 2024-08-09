@@ -2,6 +2,8 @@ Model 1 Computed EV Dataset: https://drive.google.com/drive/u/4/folders/1x40O4Zi
 
 https://colab.research.google.com/github/lexcion/model-backtester/blob/main/handicap_backtester.ipynb
 
+https://colab.research.google.com/github/lexcion/model-backtester/blob/main/total_backtester.ipynb
+
 https://colab.research.google.com/github/lexcion/model-backtester/blob/main/model-ev-graph.ipynb
 
 # NBA Betting Simulator
