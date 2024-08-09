@@ -10,7 +10,7 @@ This is an interactive betting simulator using my Model 1.0 for NBA 2023-2024 ga
 
 ## How to Use
 
-- Run the Jupyter Notebook and scroll down to the last output.
+- Run all cells on the Jupyter Notebook and scroll down to the last output.
 - Adjust parameters using the interactive sliders.
 - Run simulations and analyze results.
 
